@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="Untitled-1.png" sizes="32x32">
+
+
+    <title>Maths Point</title>
+ <style>
+     *{
+         box-sizing: border-box;
+     }
+ body{
+     margin: 0;
+     padding: 0;
+     font-family: Arial, Helvetica, sans-serif;
+ }
+ #myVideo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  z-index: -1;
+}
+.sbox{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    height: 375px;
+    background: #141730;
+    overflow: hidden;
+    border-radius: 15px;
+    border: 2px solid #ffff;
+    box-shadow: 0 0 10px blue,
+                0 0 20px blue,
+                0 0 30px blue,
+                0 0 40px blue,
+                0 0 50px blue;       
+}
+ .figure{
+width: 100%;
+height: 100%;
+}
+.figure img{
+
+    width: 100%;
+    transition: .5s ease-in-out;
+}
+.sbox:hover .figure img{
+    transform:  scale(1.1) ;
+    opacity: .3;
+}
+.cap{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    bottom: 40px;
+    right:40px;    
+}
+.contact{
+    position: absolute;
+    top: 12px;
+    transform: translateY(-5%);
+    z-index: 1;
+text-align: center;
+opacity: 0;
+    transition: .5s ease-in-out;
+}
+.sbox:hover .contact{
+    opacity: 1;
+}
+ h2{
+    padding: 0;
+    margin: 10px 0 0 100px;
+    font-size: 2em;
+ 
+    color: aqua;
+}
+h4{
+    padding: 0;
+    margin: 20px 0 0 100px;
+    font-size: 25px;
+    color: rgb(255, 221, 31);
+}
+p{
+    padding: 0;
+    margin: 40px 0 10px 100px;
+    font-size: 22px;
+    font-weight:800;
+    color: rgb(237, 248, 250);
+}
+span{
+    padding: 5px;
+    margin: 20px 0 0 100px;
+    font-size: 22px;
+    font-weight: 900;
+    color: rgb(229, 250, 250);
+    border-top: 1px solid #fff;
+}
+.cap::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    border-top: 2px solid rgb(242, 248, 232);
+    border-bottom: 2px solid rgb(238, 248, 224);
+    box-sizing: border-box;         
+    transition: .7s ease-in-out;
+    transform: scale(0,1);
+}
+.sbox:hover .cap::before{
+    transform: scale(1,1);
+}
+.cap::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    border-radius: 15px;
+    border-left: 2px solid rgb(238, 255, 211);
+    border-right: 2px solid rgb(240, 253, 219);
+    box-sizing: border-box;   
+    transition: .5s ease-in-out;
+    transform: scale(1,0);
+}
+.sbox:hover .cap::after{
+    transform: scale(1,1);
+}
+
+ </style>
+</head>
+<body>
+    <div class="sbox">
+<div class="figure">
+    <img src="1234.png" alt="mathpoint">
+    <div class="cap">
+        <div class="contact">
+        <h2>BIPLAB DEY</h2>
+        <h4>B.SC.( H), M.SC(MATH), B.ED</h4>
+        <p>Call Now: +91 -9749202014</p>        
+        <span>Call Now: +91 -9531618981</span>
+    </div>
+    </div>
+</div>
+    </div>
+    <video autoplay muted loop id="myVideo" mediagroup="all" >
+            <source src="ss.webm" type="video/mp4" > Your browser does not support HTML5 video.
+          </video>
+          <!---Edite by sourov hazra-->
+</body>
+
+</html>
